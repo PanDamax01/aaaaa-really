@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1em;
+	height: 100vh;
+	background: rgb(221, 221, 221);
+	background: linear-gradient(
+		138deg,
+		rgba(221, 221, 221, 1) 0%,
+		rgba(221, 221, 221, 1) 35%,
+		rgba(255, 137, 1, 1) 35%,
+		rgba(247, 107, 28, 1) 65%,
+		rgba(221, 221, 221, 1) 65%,
+		rgba(221, 221, 221, 1) 100%
+	);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+}
+
+.content {
+	position: relative;
+	padding: 2em 2em;
+	width: 600px;
+	min-height: 280px;
+	background-color: #eee;
+	border: 3px solid #000;
+	border-radius: 16px;
+}
+
+.content .btn {
+	position: absolute;
+	bottom: 8px;
+	right: 8px;
+	padding: 0.2em;
+	background: transparent;
+	border: none;
+	font-size: 4rem;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+.content .btn:hover {
+	transform: scale(0.9);
+}
+
+.content .title {
+	text-align: center;
+	margin-bottom: 1em;
+	padding-bottom: 0.2em;
+	border-bottom: 3px dashed #000;
+}
+
+.content .title .days {
+	color: #ff0808;
+}
+
+.content .text {
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+	.content {
+		width: 800px;
+		min-height: 400px;
+		padding: 4em 3em;
+		border: 5px solid #000;
+	}
+
+	.content .title {
+		padding-bottom: none;
+		border-bottom: none;
+		font-size: 4rem;
+	}
+
+	.content .text {
+		font-size: 2.4rem;
+	}
+
+	.content .btn {
+		font-size: 6rem;
+	}
+}
+
+canvas#confetti {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	pointer-events: none;
+}
